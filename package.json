@@ -1,0 +1,52 @@
+{
+  "name": "dsh-bangumi-account",
+  "version": "0.1.0",
+  "description": "Bangumi account for DeepSeek Harness: sign in from Settings, sync collections, and let the model look up anime and remember the owner's taste.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "bangumi",
+    "anime",
+    "plugin"
+  ],
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "client",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node scripts/host-tests.mjs && node scripts/api-tests.mjs && node scripts/client-smoke.mjs",
+    "test:live": "node scripts/live-test.mjs",
+    "check": "node --check src/index.js && node --check client/client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

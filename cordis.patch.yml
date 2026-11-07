@@ -1,0 +1,17 @@
+# dsh-bangumi-account bundle
+# 安装：plugin_manager install_bundle（本地目录）
+# 说明：token 不在这里，存放在凭据库；这里只有可公开审查的开关。
+- insert:
+    - id: dsh-bangumi-account
+      name: dsh-bangumi-account
+      config:
+        apiBase: https://api.bgm.tv
+        userAgent: dsh-bangumi-account/0.1.0 (https://github.com/dsh-local/dsh-bangumi-account)
+        proxy: ''
+        includeNsfw: false
+        includePrivate: false
+        includeComments: true
+        allowWrite: false
+        syncIntervalHours: 6
+        cacheSubjectTtlDays: 7
+        requestIntervalMs: 300
