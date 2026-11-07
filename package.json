@@ -4,6 +4,15 @@
   "description": "Bangumi account for DeepSeek Harness: sign in from Settings, sync collections, and let the model look up anime and remember the owner's taste.",
   "type": "module",
   "license": "MIT",
+  "author": "Jjas0n507",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jjas0n507/dsh-bangumi-account.git"
+  },
+  "homepage": "https://github.com/Jjas0n507/dsh-bangumi-account#readme",
+  "bugs": {
+    "url": "https://github.com/Jjas0n507/dsh-bangumi-account/issues"
+  },
   "keywords": [
     "dsh",
     "dsh-plugin",
